@@ -248,6 +248,21 @@ Run tests:
 .\venv\Scripts\python.exe -m pytest -q
 ```
 
+Run full API smoke test (prints JWTs, credentials, endpoint responses, and downloads payslip):
+
+```powershell
+.\venv\Scripts\python.exe test.py
+```
+
+`test.py` coverage includes:
+- Auth: register, login, refresh, logout
+- Employee APIs: create/list/get/update
+- Attendance: check-in, check-out, history, monthly report, correction
+- Payroll: generate, history, payslip create, payslip download
+
+Downloaded payslip location:
+- `zz/api_test_downloads/`
+
 Run lint:
 
 ```powershell
